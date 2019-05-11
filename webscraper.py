@@ -6,10 +6,10 @@ import json
 
 #  Set up blog_id to account for today
 #  blog_id decreases by 1 every day after 5.11.19
-#  reset this function monthly
+#  *reset this function monthly*
 
 date = datetime.today()
-blog_id = 358605 - (date.day - 12)
+blog_id = 358605 - (date.day - 11)
 
 url = 'https://crossfit-toybox.triib.com/blog/2019-05-'+ str(date.day) + '/'+ str(blog_id) + '/'
 response = requests.get(url, timeout=5)

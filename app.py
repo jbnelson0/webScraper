@@ -1,8 +1,9 @@
 import pyrebase
 import json
+from webscraper import date, blog_id
 
 config = {
-  "apiKey": "AIzaSyB4YbNMkY-1CjnjOLwuS1O30mwS1z3eaKU",
+  "apiKey": "#########################",
   "authDomain": "scraping-workouts.firebaseapp.com",
   "databaseURL": "https://scraping-workouts.firebaseio.com",
   "projectId": "scraping-workouts",
@@ -14,13 +15,13 @@ firebase = pyrebase.initialize_app(config)
 
 db = firebase.database()
 
-
+blogID = str(blog_id)
 
 
 with open('workoutData.json') as json_data:
     jsonData = json.load(json_data)
 
-db.child("names").push(jsonData)
+db.child(blogID).push(jsonData)
 
 #for i in jsonData:
 #    print("Date: " + i['Title'] + " Workout -- " + i['Workout'], )
