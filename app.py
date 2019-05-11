@@ -4,11 +4,11 @@ from webscraper import date, blog_id
 
 config = {
   "apiKey": "#########################",
-  "authDomain": "scraping-workouts.firebaseapp.com",
-  "databaseURL": "https://scraping-workouts.firebaseio.com",
-  "projectId": "scraping-workouts",
-  "storageBucket": "scraping-workouts.appspot.com",
-  "messagingSenderId": "48784455086",
+  "authDomain": "############################",
+  "databaseURL": "##########################",
+  "projectId": "#######################",
+  "storageBucket": "###################",
+  "messagingSenderId": "##############",
 }
 
 firebase = pyrebase.initialize_app(config)
