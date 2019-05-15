@@ -6,10 +6,12 @@ import json
 
 #  Set up blog_id to account for today
 #  blog_id decreases by 1 every day after 5.11.19
-#  *reset this function monthly*
+#  *reset this function weekly*
+
+# activate test environment --> tutorial-env\Scripts\activate.bat
 
 date = datetime.today()
-blog_id = 358605 - (date.day - 11)
+blog_id = 362571 - (date.day - 13)
 
 url = 'https://crossfit-toybox.triib.com/blog/2019-05-'+ str(date.day) + '/'+ str(blog_id) + '/'
 response = requests.get(url, timeout=5)
@@ -26,10 +28,10 @@ for item in content.findAll('div', attrs={"class": "col-md-8"}):
         if workout.find('h5') != None:
             workoutObject = {
                 "Title": workout.find('h5').text,
-                "Workout": workout.find('div', attrs={"class": "workout_description"}).text,
+                "Workout": workout.find('div', attrs={"class": "workout_description"}).text.replace("\xa0", ""),
             }
             workoutArr.append(workoutObject)
 
-#print(workoutArr)
-with open('workoutData.json', 'w') as outfile:
-    json.dump(workoutArr, outfile)
+print(workoutArr)
+#with open('workoutData.json', 'w') as outfile:
+#    json.dump(workoutArr, outfile)

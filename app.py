@@ -9,8 +9,6 @@ config = {
   "projectId": "#######################",
   "storageBucket": "###################",
   "messagingSenderId": "##############",
-
-
 }
 
 firebase = pyrebase.initialize_app(config)
