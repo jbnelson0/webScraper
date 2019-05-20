@@ -11,7 +11,7 @@ import json
 # activate test environment --> tutorial-env\Scripts\activate.bat
 
 date = datetime.today()
-blog_id = 362571 - (date.day - 13)
+blog_id = 364539 - (date.day - 20)
 
 url = 'https://crossfit-toybox.triib.com/blog/2019-05-'+ str(date.day) + '/'+ str(blog_id) + '/'
 response = requests.get(url, timeout=5)
