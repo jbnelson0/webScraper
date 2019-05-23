@@ -8,7 +8,7 @@ import json
 #  blog_id decreases by 1 every day after 5.11.19
 #  *reset this function weekly*
 
-# activate test environment --> tutorial-env\Scripts\activate.bat
+# activate test environment --> .\env\Scripts\activate
 
 date = datetime.today()
 blog_id = 364539 - (date.day - 20)
