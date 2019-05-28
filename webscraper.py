@@ -2,6 +2,8 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 import requests
 import json
+import tkinter as tk
+
 
 
 #  Set up blog_id to account for today
@@ -32,6 +34,16 @@ for item in content.findAll('div', attrs={"class": "col-md-8"}):
             }
             workoutArr.append(workoutObject)
 
-print(workoutArr)
+#print(workoutArr)
+
+root= tk.Tk()
+
+canvas1 = tk.Canvas(root, width = 1000, height = 350)
+canvas1.pack()
+
+label1 = tk.Label(root, text= workoutArr)
+canvas1.create_window(500, 150, window=label1)
+
+root.mainloop()
 #with open('workoutData.json', 'w') as outfile:
 #    json.dump(workoutArr, outfile)
