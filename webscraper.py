@@ -11,7 +11,7 @@ import json
 # activate test environment --> .\env\Scripts\activate
 
 date = datetime.today()
-blog_id = 364539 - (date.day - 20)
+blog_id = 369628 - (date.day - 28)
 
 url = 'https://crossfit-toybox.triib.com/blog/2019-05-'+ str(date.day) + '/'+ str(blog_id) + '/'
 response = requests.get(url, timeout=5)
