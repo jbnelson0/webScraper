@@ -38,11 +38,11 @@ for item in content.findAll('div', attrs={"class": "col-md-8"}):
 
 root= tk.Tk()
 
-canvas1 = tk.Canvas(root, width = 1000, height = 350)
+canvas1 = tk.Canvas(root, width = 1500, height = 350)
 canvas1.pack()
 
 label1 = tk.Label(root, text= workoutArr)
-canvas1.create_window(500, 150, window=label1)
+canvas1.create_window(750, 150, window=label1)
 
 root.mainloop()
 #with open('workoutData.json', 'w') as outfile:
