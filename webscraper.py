@@ -36,14 +36,15 @@ for item in content.findAll('div', attrs={"class": "col-md-8"}):
 
 #print(workoutArr)
 
-root= tk.Tk()
+#root= tk.Tk()
 
-canvas1 = tk.Canvas(root, width = 1500, height = 350)
-canvas1.pack()
+#canvas1 = tk.Canvas(root, width = 1500, height = 350)
+#canvas1.pack()
 
-label1 = tk.Label(root, text= workoutArr)
-canvas1.create_window(750, 150, window=label1)
+#label1 = tk.Label(root, text= workoutArr)
+#canvas1.create_window(750, 150, window=label1)
 
-root.mainloop()
-#with open('workoutData.json', 'w') as outfile:
-#    json.dump(workoutArr, outfile)
+#root.mainloop()
+
+with open('workoutData.json', 'w') as outfile:
+    json.dump(workoutArr, outfile)
