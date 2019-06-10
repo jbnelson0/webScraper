@@ -13,7 +13,7 @@ import tkinter as tk
 # activate test environment --> .\env\Scripts\activate
 
 date = datetime.today()
-blog_id = 372638 - (date.day - 3)
+blog_id = 376757 - (date.day - 10)
 
 url = 'https://crossfit-toybox.triib.com/blog/2019-06-'+ str(date.day) + '/'+ str(blog_id) + '/'
 response = requests.get(url, timeout=5)
