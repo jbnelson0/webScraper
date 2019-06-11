@@ -3,6 +3,7 @@ import pyrebase
 import json
 from webscraper import date, blog_id
 
+
 config = {
   "apiKey": os.environ.get('FIREBASE_KEY_SCRAPER'),
   "authDomain": os.environ.get('FIREBASE_AUTH_DOMAIN_SCRAPER'),
@@ -24,15 +25,6 @@ with open('./testing/scraping_test/workoutData.json') as json_data:
 
 db.child(blogID).push(jsonData)
 
-#root = tk.Tk()
-
-#canvas1 = tk.Canvas(root, width = 1500, height = 350)
-#canvas1.pack()
-
-#label1 = tk.Label(root, text= workoutArr)
-#canvas1.create_window(750, 150, window=label1)
-
-#root.mainloop()
 
 #for i in jsonData:
 #    print("Date: " + i['Title'] + " Workout -- " + i['Workout'], )
