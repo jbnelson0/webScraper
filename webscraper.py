@@ -7,7 +7,7 @@ import tkinter as tk
 
 
 #  Set up blog_id to account for today
-#  blog_id decreases by 1 every day after 5.11.19
+#  blog_id decreases by 1 every day after date of blog id update
 #  *reset this function weekly*
 
 # activate test environment --> .\env\Scripts\activate
@@ -29,8 +29,8 @@ for item in content.findAll('div', attrs={"class": "col-md-8"}):
     for workout in item.findAll('div', attrs={"class": "panel-body"}):
         if workout.find('h5') != None:
             workoutObject = {
-                "Title": workout.find('h5').text,
-                "Workout": workout.find('div', attrs={"class": "workout_description"}).text.replace("\xa0", ""),
+                "Title": workout.find('h5').text.replace("\"B\"", ""),
+                "Workout": workout.find('div', attrs={"class": "workout_description"}).text.replace("\u00a0", ""),
             }
             workoutArr.append(workoutObject)
 
