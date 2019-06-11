@@ -1,7 +1,6 @@
 import os
 import yagmail
 from datetime import datetime
-from config import Config
 
 date = datetime.today()
 yag = yagmail.SMTP(os.environ.get('EMAIL_USER'), os.environ.get('EMAIL_PASS'))

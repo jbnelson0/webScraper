@@ -1,12 +1,12 @@
 import os
 
 Config_fb = {
-    "apiKey": "AIzaSyB4YbNMkY-1CjnjOLwuS1O30mwS1z3eaKU",
-    "authDomain": "scraping-workouts.firebaseapp.com",
-    "databaseURL": "https://scraping-workouts.firebaseio.com",
+    "apiKey": os.environ.get('FIREBASE_KEY_SCRAPER'),
+    "authDomain": os.environ.get('FIREBASE_AUTH_DOMAIN_SCRAPER'),
+    "databaseURL": os.environ.get('FIREBASE_DB_URL_SCRAPER'),
     "projectId": "scraping-workouts",
-    "storageBucket": "scraping-workouts.appspot.com",
-    "messagingSenderId": "48784455086"
+    "storageBucket": os.environ.get('FIREBASE_STORE_BUCKET_SCRAPER'),
+    "messagingSenderId": os.environ.get('FIREBASE_MSG_SENDER_ID_SCRAPER')
 }
 
 class Config:
