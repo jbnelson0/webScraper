@@ -19,10 +19,20 @@ db = firebase.database()
 blogID = str(blog_id)
 
 
-with open('workoutData.json') as json_data:
+with open('./testing/scraping_test/workoutData.json') as json_data:
     jsonData = json.load(json_data)
 
 db.child(blogID).push(jsonData)
+
+#root = tk.Tk()
+
+#canvas1 = tk.Canvas(root, width = 1500, height = 350)
+#canvas1.pack()
+
+#label1 = tk.Label(root, text= workoutArr)
+#canvas1.create_window(750, 150, window=label1)
+
+#root.mainloop()
 
 #for i in jsonData:
 #    print("Date: " + i['Title'] + " Workout -- " + i['Workout'], )
