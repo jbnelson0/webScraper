@@ -28,9 +28,8 @@ content = BeautifulSoup(response.content, 'html.parser')
 workoutArr = []
 for item in content.findAll('div', attrs={"class": "col-md-8"}):
     for workout in item.findAll('div', attrs={"class": "panel-body"}):
-        if workout.find('h5') != None:
-            workoutObject = workout.find('div', attrs={"class": "workout_description"}).text.replace("\u00a0", "")
-            workoutArr.append(workoutObject)
+        workoutObj = workout.find('div', attrs={"class": "workout_description"}).text.replace("\u00a0", "")
+        workoutArr.append(workoutObj)
 
 #print(workoutArr)
 
