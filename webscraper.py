@@ -33,7 +33,7 @@ for item in content.findAll('div', attrs={"class": "col-md-8"}):
 
 #print(workoutArr)
 
-with open('workoutData.json', 'w') as outfile:
+with open('./testing/scraping_test/workoutData.json', 'w') as outfile:
     json.dump(workoutArr, outfile)
 
 #add pop-up on desktop
