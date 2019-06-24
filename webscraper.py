@@ -14,7 +14,7 @@ from firebase import add_workout
 # activate test environment --> .\env\Scripts\activate
 
 date = datetime.today()
-blog_id = 381373 - (date.day - 17)
+blog_id = 384344 - (date.day - 24)
 
 url = 'https://crossfit-toybox.triib.com/blog/2019-06-'+ str(date.day) + '/'+ str(blog_id) + '/'
 response = requests.get(url, timeout=5)
