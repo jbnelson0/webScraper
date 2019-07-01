@@ -14,9 +14,9 @@ from firebase import add_workout
 # activate test environment --> .\env\Scripts\activate
 
 date = datetime.today()
-blog_id = 384344 - (date.day - 24)
+blog_id = 387513 - (date.day - 1)
 
-url = 'https://crossfit-toybox.triib.com/blog/2019-06-'+ str(date.day) + '/'+ str(blog_id) + '/'
+url = 'https://crossfit-toybox.triib.com/blog/2019-07-'+ str(date.day) + '/'+ str(blog_id) + '/'
 response = requests.get(url, timeout=5)
 content = BeautifulSoup(response.content, 'html.parser')
 
