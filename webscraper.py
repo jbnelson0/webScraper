@@ -14,7 +14,7 @@ from firebase import add_workout
 # activate test environment --> .\env\Scripts\activate
 
 date = datetime.today()
-blog_id = 387513 - (date.day - 1)
+blog_id = 390943 - (date.day - 8)
 
 url = 'https://crossfit-toybox.triib.com/blog/2019-07-'+ str(date.day) + '/'+ str(blog_id) + '/'
 response = requests.get(url, timeout=5)
@@ -38,15 +38,15 @@ with open('./testing/scraping_test/workoutData.json', 'w') as outfile:
 
 #add pop-up on desktop
 
-root = tk.Tk()
+#root = tk.Tk()
 
-canvas1 = tk.Canvas(root, width = 1500, height = 350)
-canvas1.pack()
+#canvas1 = tk.Canvas(root, width = 1500, height = 350)
+#canvas1.pack()
 
-label1 = tk.Label(root, text= workoutArr)
-canvas1.create_window(750, 150, window=label1)
+#label1 = tk.Label(root, text= workoutArr)
+#canvas1.create_window(750, 150, window=label1)
 
-root.mainloop()
+#root.mainloop()
 
 
 #send Email
