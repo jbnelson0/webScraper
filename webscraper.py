@@ -16,7 +16,7 @@ from firebase import add_workout
 date = datetime.today()
 blog_id = 399517 - (date.day - 29)
 
-url = 'https://crossfit-toybox.triib.com/blog/2019-07-'+ str(date.day) + '/'+ str(blog_id) + '/'
+url = 'https://crossfit-toybox.triib.com/blog/2019-08-'+ str(date.day) + '/'+ str(blog_id) + '/'
 response = requests.get(url, timeout=5)
 content = BeautifulSoup(response.content, 'html.parser')
 
